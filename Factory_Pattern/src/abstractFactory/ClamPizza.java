@@ -1,22 +1,17 @@
-package abstractFactory;
+package headfirst.designpatterns.factory.pizzaaf;
 
-public class ClamPizza extends Pizza{
-
+public class ClamPizza extends Pizza {
 	PizzaIngredientFactory ingredientFactory;
-	
-	public ClamPizza( PizzaIngredientFactory fact ) {
-		ingredientFactory = fact;
+ 
+	public ClamPizza(PizzaIngredientFactory ingredientFactory) {
+		this.ingredientFactory = ingredientFactory;
 	}
-	
-	@Override
+ 
 	void prepare() {
-		// here is where the magic happes...asks the factory to produce a needed ingredients to create CheesePizza
-		System.out.println( "Preparing " + getName() );
+		System.out.println("Preparing " + name);
 		dough = ingredientFactory.createDough();
 		sauce = ingredientFactory.createSauce();
 		cheese = ingredientFactory.createCheese();
-		clam = ingredientFactory.createClam();		// if it is NY factory, clams will be fresh
-		
+		clam = ingredientFactory.createClam();
 	}
-
 }

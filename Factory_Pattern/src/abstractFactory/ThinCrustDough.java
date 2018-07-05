@@ -1,7 +1,7 @@
-package abstractFactory;
+package headfirst.designpatterns.factory.pizzaaf;
 
-public class ThinCrustDough implements Dough{
+public class ThinCrustDough implements Dough {
 	public String toString() {
-		return "ThinCrustDough";
+		return "Thin Crust Dough";
 	}
 }

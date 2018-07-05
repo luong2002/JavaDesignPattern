@@ -1,21 +1,16 @@
-package abstractFactory;
+package headfirst.designpatterns.factory.pizzaaf;
 
-public class CheesePizza extends Pizza{
-
+public class CheesePizza extends Pizza {
 	PizzaIngredientFactory ingredientFactory;
-	
-	public CheesePizza( PizzaIngredientFactory fact ) {
-		ingredientFactory = fact;
+ 
+	public CheesePizza(PizzaIngredientFactory ingredientFactory) {
+		this.ingredientFactory = ingredientFactory;
 	}
-	
-	@Override
+ 
 	void prepare() {
-		// here is where the magic happes...asks the factory to produce a needed ingredients to create CheesePizza
-		System.out.println( "Preparing " + getName() );
+		System.out.println("Preparing " + name);
 		dough = ingredientFactory.createDough();
 		sauce = ingredientFactory.createSauce();
 		cheese = ingredientFactory.createCheese();
-		
 	}
-
 }

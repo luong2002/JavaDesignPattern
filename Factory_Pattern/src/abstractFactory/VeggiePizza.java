@@ -1,20 +1,17 @@
-package abstractFactory;
+package headfirst.designpatterns.factory.pizzaaf;
 
 public class VeggiePizza extends Pizza {
-
-	PizzaIngredientFactory factory;
-	
-	public VeggiePizza( PizzaIngredientFactory fact ) {
-		factory = fact;
+	PizzaIngredientFactory ingredientFactory;
+ 
+	public VeggiePizza(PizzaIngredientFactory ingredientFactory) {
+		this.ingredientFactory = ingredientFactory;
 	}
-	
-	@Override
+ 
 	void prepare() {
-		System.out.println( "Preparing  " + getName() );
-		Dough = factory.createDough();
-		dough = factory.createDough();
-		sauce = factory.createSauce();
-		veggies = factory.createVeggies();
+		System.out.println("Preparing " + name);
+		dough = ingredientFactory.createDough();
+		sauce = ingredientFactory.createSauce();
+		cheese = ingredientFactory.createCheese();
+		veggies = ingredientFactory.createVeggies();
 	}
-
 }
