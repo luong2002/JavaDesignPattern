@@ -1,4 +1,4 @@
-package headfirst.designpatterns.factory.pizzaaf;
+package abstractFactory;
 
 public class PlumTomatoSauce implements Sauce {
 	public String toString() {

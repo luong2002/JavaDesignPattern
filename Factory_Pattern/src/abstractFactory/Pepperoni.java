@@ -1,5 +1,5 @@
 package abstractFactory;
 
-public interface Cheese {
+public interface Pepperoni {
 	public String toString();
 }

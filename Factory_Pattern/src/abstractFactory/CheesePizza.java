@@ -1,4 +1,4 @@
-package headfirst.designpatterns.factory.pizzaaf;
+package abstractFactory;
 
 public class CheesePizza extends Pizza {
 	PizzaIngredientFactory ingredientFactory;

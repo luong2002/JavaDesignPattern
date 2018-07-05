@@ -14,10 +14,10 @@ public class CurrentConditionDisplay implements Observer, DisplayInfo{
 	}
 	
 	@Override
-	public void update(float temp, float hum, float press) {    // this is from Observer
+	public void update() {    // this is from Observer
 		previousTemperature = temperature;
-		temperature = temp;
-		humidity = hum;
+		temperature = observerable.getTemperature();
+		humidity = observerable.getHumidity();
 		if( previousTemperature != temperature)
 			display();
 		else

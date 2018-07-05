@@ -36,8 +36,20 @@ public class WeatherData implements Observable {
 	@Override
 	public void notifyObserver() {
 		for( Observer o : observer ) {
-			o.update( temperature, humidity, pressure );
+			o.update();
 		}
+	}
+
+	public float getTemperature() {
+		return temperature;
+	}
+
+	public float getHumidity() {
+		return humidity;
+	}
+
+	public float getPressure() {
+		return pressure;
 	}
 
 }
